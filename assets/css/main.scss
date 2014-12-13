@@ -751,3 +751,28 @@ tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: $base-05;
 }
+
+.projects_page_image {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 0px solid black;
+}
+
+.centered {
+  text-align: center;
+}
+
+.fancy {
+  background-color: white; 
+  color: #252519; 
+  font-family: Lora, serif; 
+  font-size: 15px; 
+  line-height: 22px;
+}

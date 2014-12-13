@@ -54,8 +54,8 @@ Feel free to change your `name`, `descriptionn`, `meta_description`, `author det
 harmony:
   name: Harmony
   # Little description about your site
-  description: Harmony is free responsive jekyll theme.
-  meta_description: Harmony is free responsive jekyll theme. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  description: Browse to your heart's content. 
+  meta_description: Browse to your heart's content.  It will appear in your document head meta (for Google search results) and in your feed.xml site description.
   basetheme: theme-base-01 # pre defined the{{ site.url | prepend: site.baseurl }}mes are darken, blue-water, reddish.
   author: # Author details
     name: Gayan Virajith
