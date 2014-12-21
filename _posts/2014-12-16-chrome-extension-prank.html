@@ -1,0 +1,86 @@
+---
+title: "Google Chrome Prank Extension"
+layout: "post"
+permalink: "/2014/12/chrome-extension-prank.html"
+uuid: "7364057370260415509"
+guid: "tag:blogger.com,1999:blog-2609351362218351940.post-7364057370260415509"
+date: "2014-12-16 22:41:00"
+description: 
+blogger:
+    siteid: "2609351362218351940"
+    postid: "7364057370260415509"
+    comments: "0"
+categories: 
+author: 
+    name: "Mary Briskin"
+    url: "https://plus.google.com/107701473444340691919?rel=author"
+    image: "//lh3.googleusercontent.com/-a5cam6dPXIY/AAAAAAAAAAI/AAAAAAAAAd4/1vBYBu0Sn2E/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+  Next Cyber Monday will be a blast.<br />
+  <br />
+  <a href="https://chrome.google.com/webstore/detail/confused-shopper-prank/mhamipanbofhcddlbjfkgkgigkekhjon">Confused Shopper</a> is a Chrome extension that changes all of the prices on your page to appear to be between $0.01 and $0.99. Secretly upload it to a friend's computer and enjoy their reaction when they discover the great new deals of the day.<br />
+  <div class="separator" style="clear: both; text-align: center;">
+  </div>
+  <div class="separator" style="clear: both; text-align: center;">
+  <br /><a href="https://chrome.google.com/webstore/detail/confused-shopper-prank/mhamipanbofhcddlbjfkgkgigkekhjon" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-uS5BU3YTiOQ/VJD7fGWkTGI/AAAAAAAAAw8/PjvVp1OTDyQ/s1600/Screen%2BShot%2B2014-12-16%2Bat%2B9.40.17%2BPM.png" height="404" width="640" /></a></div>
+  <div class="separator" style="clear: both; text-align: center;">
+  <br /></div>
+  <div class="" style="clear: both; text-align: left;">
+  This was my first Chrome Extension so to get started, I read through Google's&nbsp;<a href="https://developer.chrome.com/extensions/getstarted" target="_blank">tutorial</a>.&nbsp;</div>
+  <div class="separator" style="clear: both; text-align: left;">
+  To capture all of the prices on the page I used a regular expression, to access and change them I used Javascript's String replace() method and innerHTML method.
+
+{% highlight javascript %}
+
+function activate() {
+  // captures all of the prices on the page
+  var prices = /[$](\.|\,|\d+)+/g; 
+  //replaces them with randomly generated prices
+  document.body.innerHTML = document.body.innerHTML.replace(prices, randomPrice); 
+}
+
+{% endhighlight %}
+
+  <div class="" style="clear: both; text-align: left;">
+  <br /></div>
+  <div class="" style="clear: both; text-align: left;">
+  <br /></div>
+  <div class="" style="clear: both; text-align: left;">
+  <span style="color: blue;">Lessons Learned:</span></div>
+  <div class="separator" style="clear: both; text-align: left;">
+  </div>
+  <ol>
+  <li><span style="color: blue;">Calling the Javascript String replace() method with a function</span></li>
+  <li><span style="color: blue;">Regular Expressions for a repeating patterns</span></li>
+  <li><span style="color: blue;">Basic setup of a Chrome extension</span></li>
+  </ol>
+  <br />
+  <div class="separator" style="clear: both; text-align: left;">
+  <br /></div>
+  <span style="color: red;">Issues:</span><br />
+  <br />
+  <ol>
+  <li><span style="color: red;">Something like '$5 billion' would turn into something like '$0.45 billion', which looks silly.</span></li>
+  <li><span style="color: red;">Since prices are randomly generated, if a page displays the price of a single item twice the two values will likely be different.</span></li>
+  </ol>
+  <br />
+  <br />
+  Fixes/additional features to add:<br /><br>
+  <ol>
+  <li>Include conditions for the words 'billion, million, hundred' etc. and change accordingly.</li>
+  <li>Keep equal prices equal (i.e. $10 and $10 will equal $0.22 and $0.22).&nbsp;</li>
+  <li>Let users choose the range of prices they want to display.</li>
+  <li>Add functionality for turning the extension off</li>
+  <li>Including a safeguard to keep people from actually buying anything when they are unaware of the real price.</li>
+  </ol>
+  <br />
+  <br />
+
+  Get the Confused Shopper Extension <a href="https://chrome.google.com/webstore/detail/confused-shopper-prank/mhamipanbofhcddlbjfkgkgigkekhjon">HERE</a>. 
+
+  <div class="separator" style="clear: both; text-align: center;">
+  <a href="http://2.bp.blogspot.com/-CJFUWY5DAJc/VJD7ac7ZO7I/AAAAAAAAAw0/OE-ufXRoH8I/s1600/Screen%2BShot%2B2014-12-16%2Bat%2B9.37.37%2BPM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-CJFUWY5DAJc/VJD7ac7ZO7I/AAAAAAAAAw0/OE-ufXRoH8I/s1600/Screen%2BShot%2B2014-12-16%2Bat%2B9.37.37%2BPM.png" height="314" width="640" /></a></div>
+
+</div>

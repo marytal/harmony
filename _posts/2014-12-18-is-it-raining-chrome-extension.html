@@ -1,0 +1,86 @@
+---
+title: "Is It Raining? Another Chrome Extension"
+layout: "post"
+permalink: "/2014/12/is-it-raining-chrome-extension.html"
+uuid: "7364057370260415509"
+guid: "tag:blogger.com,1999:blog-2609351362218351940.post-7364057370260415509"
+date: "2014-12-18 22:41:00"
+description: 
+blogger:
+    siteid: "2609351362218351940"
+    postid: "7364057370260415509"
+    comments: "0"
+categories: 
+author: 
+    name: "Mary Briskin"
+    url: "https://plus.google.com/107701473444340691919?rel=author"
+    image: "//lh3.googleusercontent.com/-a5cam6dPXIY/AAAAAAAAAAI/AAAAAAAAAd4/1vBYBu0Sn2E/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+  I enjoyed making my last one and thought I'd give it another go. This extension plays a simple animation (falling rain) over the client's page to let him or her know whether it is raining in his or her region. See video for demonstration.<br />
+  <br />
+  Get 'Is it Raining?' <a href="https://chrome.google.com/webstore/detail/is-it-raining/nfbemkbodblloganccnncedoenadnjgo" target="_blank">HERE</a>.<br />
+  <br />
+  <iframe allowfullscreen="" frameborder="0" height="390" src="//www.youtube.com/embed/0RMx5KZFNM4" width="640"></iframe>
+
+  <br />
+  <br />
+  I used Canvas to animate the falling rain.<br />
+  <br />
+  Once I finished that, I wrote a function, using jQuery, to send a GET request to <a href="http://ipinfo.io/">http://ipinfo.io</a>, which returned a JSON object containing the user's IP address. Learned a small lesson on JSONP on the way.<br />
+  <br />
+
+{% highlight javascript %}
+
+function find_ip_address() {
+  $.get("http://ipinfo.io", function(response) {
+      user_ip = response.ip;
+  }, "jsonp");
+}
+
+{% endhighlight %}
+
+  <br />
+  I then wrote a function to send a GET request to <a href="http://api.worldweatheronline.com/">http://api.worldweatheronline.com</a>&nbsp;, filling in the user's IP address and my key as parameters.<br />
+  <br />
+
+{% highlight javascript %}
+
+function check_weather(){
+
+  $.get("http://api.worldweatheronline.com/free/v2/weather.ashx?key=xxxx.xxxx.xxxx&q=" + user_ip +"&format=json", function(response) {
+    if(response.data.error){
+      // check to see if weather data for client's geographical is available.
+      console.log("No weather data for your region. Sorries!")
+    } else if(response.data.current_condition[0].precipMM > 0){
+      console.log("it's raiiinin!");
+      // if there is precipitation, start the rain animation
+      make_it_rain();
+    }
+  }, "jsonp");
+}
+
+
+{% endhighlight %}
+
+  <br />
+  <br />
+  <br />
+In order to avoid annoying the client with a continuous rainfall, I wrote the make_it_rain() function to only run for a few seconds. However, every 20 minutes, setInterval calls an anonymous function, which calls the check_weather() function (seen above) to determine whether it is still raining. 
+
+{% highlight javascript %}
+
+setInterval(function() {
+  check_weather();
+}, 1000 * 60 * 20);
+
+{% endhighlight %}
+
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+</div>

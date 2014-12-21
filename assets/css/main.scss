@@ -541,7 +541,7 @@ Code snippets
 
 --------------------------------- */
 code, pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: "Lora", serif, Monaco, "Courier New", monospace;
 }
 code {  
   padding: .25em .5em;
@@ -584,7 +584,7 @@ pre {
 
 /* Gist via GitHub Pages */
 .gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
+  font-family: "Lora", serif, "Courier New", monospace !important;
   margin: 1em 0;
 }
 .gist .markdown-body {
@@ -756,6 +756,11 @@ tbody tr:nth-child(odd) th {
   max-width: 200px;
   max-height: 200px;
 }
+
+.projects_page_image:hover {
+
+}
+
 
 table {
     border-collapse: collapse;

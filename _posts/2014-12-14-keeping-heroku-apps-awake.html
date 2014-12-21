@@ -1,0 +1,58 @@
+---
+title: "Keeping Heroku Apps Awake"
+layout: "post"
+permalink: "/2014/12/keeping-heroku-apps-awake.html"
+uuid: "7364057370260415509"
+guid: "tag:blogger.com,1999:blog-2609351362218351940.post-7364057370260415509"
+date: "2014-12-14 22:41:00"
+updated: "2014-12-19 22:41:56"
+description: 
+blogger:
+    siteid: "2609351362218351940"
+    postid: "7364057370260415509"
+    comments: "0"
+categories: 
+author: 
+    name: "Mary Briskin"
+    url: "https://plus.google.com/107701473444340691919?rel=author"
+    image: "//lh3.googleusercontent.com/-a5cam6dPXIY/AAAAAAAAAAI/AAAAAAAAAd4/1vBYBu0Sn2E/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+I host my Rails apps on <a href="https://www.heroku.com/" target="_blank">Heroku</a>, which is an awesome service.<br />
+It was becoming a problem though, that after an hour of disuse the apps would go into idle mode. Once an app is idling, the startup time ranges from 8 - 15 seconds, by which point many users just give up and click elsewhere.<br />
+<br />
+I fixed this by creating yet another Rails app and writting a custom rake task that sends GET requests to all of my previous applications, keeping them from idling.<br /> 
+
+{% highlight ruby %}
+desc "This task is called by the Heroku scheduler add-on"
+task :send_requests => :environment do
+  urls = ['http://loggit.marytal.com', 'http://oskar.marytal.com', 'http://magnetboard.marytal.com'] # etc.
+  urls.each do |url| 
+    HTTParty.get(url);
+  end
+end
+{% endhighlight %}
+
+
+To periodically schedule these requests, I installed a Heroku add-on called <a href="https://devcenter.heroku.com/articles/scheduler#installing-the-add-on" target="_blank">Scheduler</a>. All I had to do then was specify which rake task to run and at what frequency. Problem solved!
+<br>
+<br>
+<span style="color: blue;">Lessons Learned:</span><br />
+<br />
+<ol>
+<li><span style="color: blue;">Difference between web and worker dynos</span></li>
+<li><span style="color: blue;">Building custom rake tasks</span></li>
+<li><span style="color: blue;">How to use Heroku add-ons</span></li>
+</ol>
+<br />
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://3.bp.blogspot.com/-nv0o8sIlEAs/VI-e5kf3foI/AAAAAAAAAwM/sxHD3gIrr5I/s1600/Screen%2BShot%2B2014-12-15%2Bat%2B8.31.24%2BPM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-nv0o8sIlEAs/VI-e5kf3foI/AAAAAAAAAwM/sxHD3gIrr5I/s1600/Screen%2BShot%2B2014-12-15%2Bat%2B8.31.24%2BPM.png" height="310" width="640" /></a></div>
+<br />
+
+<br>
+
+Side Note: If you schedule too many tasks, Heroku will start charging you - so take care to monitor your usage. 
+
+</div>
