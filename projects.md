@@ -4,26 +4,13 @@ title:
 permalink: /projects/
 ---
 
-### About
+### Projects 
 
-Hi! I’m a student at the University of Waterloo, minoring in Computer Science. That’s right, CS is my minor, my major is Psychology. My mom wanted me to have a creative job, so she nudged me into the arts. Wrong move, mamma. Programming's where the creativity's at. The world is my digital oyster now. 
+I have spent the past four months under the mentorship of an [experienced developer](http://shea@sysach.com). Below are some of the projects that I made in that time. Some are little, some are big. Some are games, some are apps. Some are well written, and some... well, I was only learning, so it's okay.
 
 If you're looking to hire a summer intern, check out my [resume]({{ site.url }}/assets/resume.pdf).
 
-
-### Projects 
-
-Some are little, some are big. Some are games, some are apps. Some are well written, and some... well, I was only learning, so it's okay. 
-
-See accompanying blog posts for instructions, if necessary. 
-
 ##### Ruby on Rails 
-
-<!-- ![My helpful screenshot]({{ site.url }}/assets/css/images/testimage.png) -->
-<!-- Movie Log -->
-<!-- <a href="http://loggit.marytal.com/welcome">{% img projects_page_image /assets/css/images/movielog.png Movie Log! %}</a>
-[Blog Post](/2014/11/movie-log.html) <br>
-[Source Code](http://someurl) -->
 
 <table border="0" style="width:100%">
   <tr>
