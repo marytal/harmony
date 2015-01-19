@@ -154,9 +154,8 @@ If you're looking to hire a summer intern, check out my [resume]({{ site.url }}/
       <a href="/2014/11/simple-lightbox.html">Blog</a> <br>
       <a href="https://github.com/marytal/marytal.github.io/tree/master/simple_lightbox">Source Code</a>
     </td>
-    <td>
+    <td align="center" style="none">
       <a href="/instructions/instructions.html">{% img projects_page_image /assets/css/images/instructions.png Instructions for Canvas Games! %}</a>
-      <a href="#">Blog</a> <br>
       <a href="https://github.com/marytal/marytal.github.io/tree/master/instructions">Source Code</a>
     </td>
   </tr>
@@ -165,7 +164,7 @@ If you're looking to hire a summer intern, check out my [resume]({{ site.url }}/
 
 
 
-### Contact me
+### Contact
 
 Find me on [Google+][google] / [Github][github] / [Twitter][Twitter] or shoot me an email at <br>
 mary-briskin@hotmail.com.

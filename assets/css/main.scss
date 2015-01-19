@@ -762,6 +762,13 @@ tbody tr:nth-child(odd) th {
 
 }
 
+.about_image {
+  max-height: 200px;
+  max-width: 200px;
+  float: right;
+  margin-left: 5px;
+}
+
 
 table {
     border-collapse: collapse;
