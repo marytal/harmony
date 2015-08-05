@@ -767,8 +767,22 @@ tbody tr:nth-child(odd) th {
   max-width: 200px;
   float: right;
   margin-left: 5px;
+
 }
 
+
+.eportfolio_image {
+  max-height: 500px;
+  max-width: 500px;
+  float: right;
+  border: 5px solid black;
+
+}
+
+.eportfolio_image:hover {
+  max-width: 500px;
+  max-height: 500px; 
+}
 
 table {
     border-collapse: collapse;
