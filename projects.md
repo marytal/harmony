@@ -4,13 +4,13 @@ title:
 permalink: /projects/
 ---
 
-### Projects 
+### Projects
 
-  Some are little, some are big. Some are games, some are apps. Some are well written, and some... well, I was only learning, so it's okay.
+  Most of these are pretty old. Some are little, some are big. Some are games, some are apps. Some are well written, and some... well, I was only learning, so it's okay.
 
 Check out my [resume]({{ site.url }}/assets/resume.pdf).
 
-##### Ruby on Rails 
+##### Ruby on Rails
 
 <table border="0" style="width:100%">
   <tr>
@@ -35,12 +35,12 @@ Check out my [resume]({{ site.url }}/assets/resume.pdf).
   <tr></tr>
   <tr>
     <td align="center">
-      <a href="http://magnetboard.marytal.com/" target="_blank">{% img projects_page_image /assets/css/images/magnetboard.png Magnet Board! %}</a> 
+      <a href="http://magnetboard.marytal.com/" target="_blank">{% img projects_page_image /assets/css/images/magnetboard.png Magnet Board! %}</a>
       <a href="/2014/12/magnet-board.html">Blog</a> <br>
       <a href="https://github.com/marytal/magnet_board">Source Code</a>
     </td>
     <td align="center">
-      <a href="http://oskar.marytal.com/" target="_blank">{% img projects_page_image /assets/css/images/onepagesite.png One page site! %}</a> 
+      <a href="http://oskar.marytal.com/" target="_blank">{% img projects_page_image /assets/css/images/onepagesite.png One page site! %}</a>
       <a href="/2014/11/gallery.html">Blog</a> <br>
       <a href="https://github.com/marytal/one-page-site">Source Code</a>
     </td>

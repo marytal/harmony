@@ -9,17 +9,19 @@ permalink: /about/
 
 {% img about_image /assets/css/images/self.png Me! %}
 
-Hi! I’m a student at the University of Waterloo, minoring in Computer Science. That’s right, CS is my minor, my major is Psychology. My mom wanted me to have a creative job, so she nudged me into the arts. Wrong move, mamma. Programming's where the creativity's at. The world is my digital oyster now. 
+Hello and welcome to my website! My name is Mary and I'm currently a student at the University of Waterloo (woot!). I've had a couple of programming internships now and am happy to say that I've found my calling. If you're here hunting for interns: I have industry experience, good references, am a fast learner, and at a stage in life where becoming a better developer is my top priority – which means the more work I get done the happier I am at the end of the day!
 
-If you're looking to hire a summer intern, check out my [resume]({{ site.url }}/assets/resume.pdf) and [projects]({{ site.url}}/projects).
+Right now I'm working on making some simple Android applications. Hopefully I'll have one up here soon enough :)
+
+In the meantime you can check out my [resume]({{ site.url }}/assets/resume.pdf) or some of my older [projects]({{ site.url}}/projects).
 
 
 And for some non-CS stuff about me...
 
 ###### Travel
-I've been to the Netherlands, Bulgaria, Luxumburg, Israel, etc. I'm so cultured that if I were born milk, I'd be yogurt by now. That was a joke. The only place where I expect to "find myself" is in a mirror, traveling is just a means to see cool places and eat great food. 
+Some of my favourite spots have been the Netherlands, Luxumburg, Sweden, and Mexico. Next I'm thinking Thailand or Japan. Maybe South America. :3
 
-I kept a [travelogue](http://marytal.com) during my trip to Mexico, if you'd care to read it. 
+I usually keep a [travelogue](http://marytal.com) during my trips, if you'd care to read it. You know, it's quite a big hit with its target audience: my mom and my future self.
 
 ###### Painting
 [My mom is an artist](http://felicity-art.com), so we've always had canvases (not the HTML kind… ha) and paint laying around the house. I've taken to painting when I feel stressed or am trying to get out of cleaning.
@@ -47,7 +49,7 @@ I kept a [travelogue](http://marytal.com) during my trip to Mexico, if you'd car
 
 ###### Languages
 
-As well as English, I speak Russian and Spanish. My parents deserve the credit for my spoken Russian since they refuse to argue with me in any other language. However, I will take credit for my reading skills, as I've been working to improve them since an embarrasing attempt to read to my little sister put me to shame. I've also been learning Spanish for a year now. I finished the [Duolingo](https://www.duolingo.com/Marytal) course and have moved on to watching Spanish Soaps. [Those are fun](https://www.youtube.com/watch?v=WckCw_-7e3M). 
+As well as English, I speak Russian and Spanish. My parents deserve the credit for my spoken Russian since they refuse to argue with me in any other language. However, I will take credit for my reading skills, as I've been working to improve them since an embarrasing attempt to read to my little sister put me to shame. I've also been learning Spanish for a year now. I finished the [Duolingo](https://www.duolingo.com/Marytal) course and have moved on to watching Spanish Soaps. [Those are fun](https://www.youtube.com/watch?v=WckCw_-7e3M).
 
 {% img /assets/css/images/duolingo.png Yaaay! %}
 
